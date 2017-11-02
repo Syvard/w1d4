@@ -4,26 +4,27 @@ var students = [
   { id: 3, name: "alex",     age: 22 },
   { id: 4, name: "alex",     age: 30 }
 ];
-
+/*
 //Sort by Age
 students.sort(function(a, b){
   return a.age - b.age;
 });
-
+*/
 
 //Sort by Name
 students.sort(function(a, b){
-  var nameA = a.name.toLowerCase();
-  var nameB = b.name.toLowerCase();
-  if (nameA < nameB){
+  if (a.name < b.name){
     return -1;
   }
-  if (nameA > nameB){
+  if (a.name > b.name){
     return 1;
   }
+  if (a.name === b.name){
+  return b.age - a.age;
+  }
 
+return 0;
 
-  return 0;
 });
 
 
